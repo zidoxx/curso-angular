@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Buscando: <small>{{ termino }}</small></h1>
+    <hr>
+
+    <div *ngIf="heroe.length == 0" class="row">
+        <div class="col-md-12">
+            <div class="alert alert-primary" role="alert">
+                <strong>No existe el termino buscado: {{ termino }}</strong>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <app-heroe-tarjeta [heroe]="foo" [indice]="i" *ngFor="let foo of heroe; let i = index"> </app-heroe-tarjeta>
+    </div>
+</div>
